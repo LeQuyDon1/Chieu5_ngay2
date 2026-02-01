@@ -1,0 +1,250 @@
+/* ============== GLOBAL STYLES ============== */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 20px auto;
+}
+
+/* ============== HEADER SECTION ============== */
+.header-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header-section h1 {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ============== NAVIGATION TABS ============== */
+.nav-tabs {
+    border-bottom: 2px solid #667eea;
+    margin-bottom: 25px;
+}
+
+.nav-link {
+    color: #667eea;
+    font-weight: 500;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px 20px;
+}
+
+.nav-link:hover {
+    color: #764ba2;
+    border-bottom-color: #764ba2;
+}
+
+.nav-link.active {
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-bottom-color: #764ba2;
+}
+
+/* ============== BUTTONS ============== */
+.btn-create {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.btn-create:hover {
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-action {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    margin: 2px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-edit {
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #138496;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    color: white;
+}
+
+.btn-restore {
+    background-color: #28a745;
+    border: none;
+    color: white;
+}
+
+.btn-restore:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* ============== CARDS ============== */
+.card-custom {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-custom:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.card-custom.deleted {
+    background-color: #f8f9fa;
+    opacity: 0.7;
+}
+
+.card-custom.deleted .card-title,
+.card-custom.deleted .card-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.card-custom.deleted .comment-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* ============== BADGES ============== */
+.badge-custom {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* ============== FORMS ============== */
+.form-control,
+.form-select {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* ============== MODALS ============== */
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* ============== ALERTS ============== */
+.alert-custom {
+    border-radius: 10px;
+    border: none;
+}
+
+/* ============== STATS BOX ============== */
+.stats-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stats-box h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.stats-box p {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ============== COMMENTS SECTION ============== */
+.comments-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.comment-item {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.comment-item.deleted {
+    background-color: #f8f9fa;
+    opacity: 0.7;
+}
+
+.comment-item.deleted .comment-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* ============== EMPTY STATE ============== */
+.no-data {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+.no-data i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}

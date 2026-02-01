@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f6fa;
+        }
+
+        .card-custom {
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .stat-box h4 {
+                margin: 0;
+                font-weight: bold;
+            }
+
+        .btn-main {
+            background-color: #4f46e5;
+            color: white;
+        }
+
+            .btn-main:hover {
+                background-color: #4338ca;
+                color: white;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5" style="max-width: 900px;">
+       
+        <div class="text-center mb-4">
+            <h2>📝 Blog Manager</h2>
+            <p class="text-muted">Quản lý bài viết đơn giản</p>
+        </div>
+
+      
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <h4 id="totalPosts">0</h4>
+                    <span>Tổng bài viết</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <h4 id="activePosts">0</h4>
+                    <span>Đang hiển thị</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <h4 id="deletedPosts">0</h4>
+                    <span>Đã xoá</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-custom">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <strong>Danh sách bài viết</strong>
+                <button class="btn btn-main btn-sm" data-bs-toggle="modal" data-bs-target="#postModal"
+                        onclick="openCreatePostModal()">
+                    ➕ Thêm bài viết
+                </button>
+            </div>
+            <div class="card-body">
+                <div id="postsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="postModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="postModalTitle">Thêm bài viết</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="postForm">
+                        <div class="mb-3">
+                            <label class="form-label">Tiêu đề</label>
+                            <input type="text" class="form-control" id="postTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Lượt xem</label>
+                            <input type="number" class="form-control" id="postViews" value="0">
+                        </div>
+                        <input type="hidden" id="postId">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+                    <button class="btn btn-main" id="savePostBtn">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
